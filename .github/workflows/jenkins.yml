@@ -1,0 +1,55 @@
+# Define the GitHub Actions workflow name.
+name: jekins
+# on: 
+#  push:
+#    branches:
+#      - "master"
+#    paths:
+#      - "packer/aws/jenkins/**"
+#      - "scripts/jenkins.sh"
+#      - ".github/wokflows/jenkins.yml"
+#      - ".github/composite_actions/packer/**"
+
+# Trigger the workflow on manual workflow_dispatch events.
+on: workflow_dispatch
+
+# Define the jobs to be executed in this workflow.
+jobs:
+  ami-creation:
+   name: Jenkins AMI creation #AWS CLI Setup 
+   #This specifies that the job runs on a GitHub-hosted runner with the Ubuntu 22.04 operating system
+   runs-on: ubuntu-22.04 # Specify the runner for this job.
+    # Define the steps to be executed in this job.
+   steps:
+      - name: Checkout # Checkout the code repository.
+        uses: actions/checkout@v2 
+      
+      - name: Configure AWS Credentials # Configure AWS credentials using GitHub secrets.
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+         aws-region: eu-central-1
+
+      - name: Test configuration of AWS CLI
+        run: |
+         aws --version
+         aws configure list | grep region | awk '{print $2}'
+     
+      - name: Setup `packer` # Set up Packer using HashiCorp's action.
+        uses: hashicorp/setup-packer@main
+        id: setup
+        with:
+          version: "1.8.5" # or `latest`
+
+      - name: Run `packer init`
+        id: init # Initialize Packer in the specified directory.
+        run: "packer init ./packer/aws/jenkins/"
+
+      - name: Run `packer validate`
+        id: validate  # Validate Packer configuration.
+        run: "packer validate ./packer/aws/jenkins/"
+
+      - name: Run `packer build`
+        id: build
+        run: "packer build ./packer/aws/jenkins/"
