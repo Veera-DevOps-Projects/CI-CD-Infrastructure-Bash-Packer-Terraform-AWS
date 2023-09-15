@@ -20,7 +20,7 @@ Immutable infrastructure makes easier to maintain a consistent and predictable e
 
 Overall, immutable infrastructure provides a more reliable, secure, and scalable approach to managing IT infrastructure. It allows organizations to focus on building and deploying new applications and services, rather than maintaining and troubleshooting existing infrastructure.
 
-# Why Use Packer
+## Why Use Packer
 
 Packer is a tool for creating machine images (e.g., Amazon Machine Images - AMIs for AWS) in an automated and repeatable manner. In this specific context, Packer is being used to create a custom AMI for Jenkins. Here's why Packer is beneficial:
 
