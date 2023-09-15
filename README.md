@@ -1,6 +1,6 @@
 # CI/CD Infrastructure deployment using Terraform, GitHub Actions with custom machine images by Packer
 
-In this repository, I talk about CI/CD, it’s benefits along with Immutable infrastructure and it’s advantages. Then I create **4 GitHub Actions workflows** for creating machine images using **Packer**. After that, I deploy a multi-tier network using **Terraform** configuration and utilize custom machine images to **deploy CI/CD infrastructure**. Infrastructure deployment was carried out by GitHub actions workflows. Finally, I clean up and remove the deployment using destroy workflow.
+In this repository, I discuss about CI/CD, it’s benefits along with Immutable infrastructure and it’s advantages. Then I set up **four GitHub Actions workflows** for creating machine images using **Packer**. After that, I deploy a multi-tier network using **Terraform** configurations and utilize custom machine images to **deploy CI/CD infrastructure**. Infrastructure deployment was carried out by GitHub actions workflows. Finally, I clean up and remove the deployment using destroy workflow.
 
 ## CI/CD and it's benefits
 
@@ -19,6 +19,19 @@ Immutable infrastructure is an approach to managing IT infrastructure where infr
 Immutable infrastructure makes easier to maintain a consistent and predictable environment. It is more secure because any changes made to the system will not be persistent. Any malicious activity can be detected and remediated by simply replacing the affected instances.Moreover, it leads to faster and more reliable deployment. Morst importantly, it is highly scalable as new instances can be easily created and deployed to handle increasing workloads. This enables organizations to adapt to changes quickly and easily in demand.
 
 Overall, immutable infrastructure provides a more reliable, secure, and scalable approach to managing IT infrastructure. It allows organizations to focus on building and deploying new applications and services, rather than maintaining and troubleshooting existing infrastructure.
+
+# Why Use Packer
+
+Packer is a tool for creating machine images (e.g., Amazon Machine Images - AMIs for AWS) in an automated and repeatable manner. In this specific context, Packer is being used to create a custom AMI for Jenkins. Here's why Packer is beneficial:
+
+- **Immutable Infrastructure:** Packer helps create immutable infrastructure by generating machine images that contain the exact configuration and software you need. This ensures consistency and repeatability in your deployments.
+
+- **Speed:** Packer can build images in parallel, which can be much faster than setting up a new instance from scratch and configuring it manually every time you need Jenkins.
+
+- **Version Control:** Just like your application code, Packer configurations are version-controlled, making it easier to track changes and collaborate with a team.
+
+- **Automation:** Packer enables you to automate the creation of machine images, reducing manual intervention and potential human errors.
+
 
 ## CI/CD Immutable infrastructure with custom machine images
 
@@ -62,7 +75,7 @@ The above figure shows files for GitHub Actions (Workflow Code), immutable confi
 
 The above figure shows the GitHub Actions workflow, which builds Jenkins machine image. Installation of OpenJDK-11-JDK and Jenkins are the main highlights of building the machine image.
 
-To build a Jenkins machine image, GitHub workflow runs .github/jenkins.yaml, and files in /packer/aws/jenkins along with scripts/jenkins.sh. Similarly, We implement separate GitHub Actions workflow for other servers, e.g. nexux, postgres, sonarqube, as well.
+To build a Jenkins machine image, GitHub workflow runs github/jenkins.yaml, and files in /packer/aws/jenkins along with scripts/jenkins.sh. Similarly, We implement separate GitHub Actions workflow for other servers, e.g. nexux, postgres, sonarqube, as well.
 
 ## Infrastructure deployment using Terraform and GitHub Actions
 
