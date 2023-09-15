@@ -1,0 +1,65 @@
+name: nexus
+# This is the name of the GitHub Actions workflow.
+
+# Define when the workflow should be triggered.
+on:
+  # Uncomment this section to trigger the workflow on pushes to the 'master' branch
+  # push:
+  #   branches:
+  #     - "master"
+  #   paths:
+  #     - "packer/aws/nexus/**"
+  #     - "scripts/nexus.sh"
+
+  # This workflow is currently triggered manually via the GitHub Actions web interface.
+  workflow_dispatch:
+    # This allows for manual triggering of the workflow.
+
+jobs:
+  ami-creation:
+    # This is the name of the job within the workflow.
+    name: Nexus AMI creation
+
+    # Specify the runner (virtual machine) for the job.
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Configure AWS Credentials
+        # Configure AWS credentials using GitHub Secrets.
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+
+      - name: Test configuration of AWS CLI
+        # Check the AWS CLI version and configured region.
+        run: |
+          aws --version
+          aws configure list | grep region | awk '{print $2}'
+
+      - name: Checkout
+        # Checkout the GitHub repository.
+        uses: actions/checkout@v2
+
+      - name: Setup `packer`
+        # Set up Packer by installing the specified version.
+        uses: hashicorp/setup-packer@main
+        id: setup
+        with:
+          version: "1.8.5" # or `latest`
+
+      - name: Run `packer init`
+        # Initialize Packer in the 'packer/aws/nexus/' directory.
+        id: init
+        run: "packer init ./packer/aws/nexus/"
+
+      - name: Run `packer validate`
+        # Validate the Packer configuration in the 'packer/aws/nexus/' directory.
+        id: validate
+        run: "packer validate ./packer/aws/nexus/"
+
+      - name: Run `packer build`
+        # Build the Nexus AMI using Packer in the 'packer/aws/nexus/' directory.
+        id: build
+        run: "packer build ./packer/aws/nexus/"
