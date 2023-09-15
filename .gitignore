@@ -5,3 +5,5 @@
 /DemoCode/logs
 /terraform/.terraform
 *.txt
+Jenkinsfile
+/DemoCode
