@@ -6,6 +6,7 @@ locals {
 
 # Define a source block for creating an AMI using the Amazon EBS builder.
 #It includes settings for the resulting AMI, the source image to use, and more.
+
 source "amazon-ebs" "ubuntu" {
   # Specify the name for the resulting AMI.
   ami_name      = "jenkins-server-${local.timestamp}"
