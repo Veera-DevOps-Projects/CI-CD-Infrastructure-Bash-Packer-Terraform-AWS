@@ -27,6 +27,7 @@ source "amazon-ebs" "ubuntu" {
     random = false
   }  
 
+  security_group_id = "sg-044f80a3a6174a95b"
   # Filter the source AMI by various criteria.
   # Packer uses following as a base. 
   source_ami_filter {
