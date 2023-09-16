@@ -1,6 +1,6 @@
 # Data source to retrieve the latest Nexus image from AWS
 data "aws_ami" "latest_nexus_image" {
-  description = "Retrieve the latest Nexus machine image (AMI) from AWS."
+  #description = "Retrieve the latest Nexus machine image (AMI) from AWS."
   most_recent = true
   owners      = ["${var.image_owner}"] # Canonical
 
@@ -17,7 +17,7 @@ data "aws_ami" "latest_nexus_image" {
 
 # Resource to create an AWS instance for the Nexus server
 resource "aws_instance" "nexus_server" {
-  description = "Create an AWS instance for hosting the Nexus server."
+  #description = "Create an AWS instance for hosting the Nexus server."
   ami             = data.aws_ami.latest_nexus_image.id # us-west-2
   instance_type   = var.nexus_machine_data.type
   key_name        = var.key_pair_name

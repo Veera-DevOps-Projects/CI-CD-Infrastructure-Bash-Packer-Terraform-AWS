@@ -17,7 +17,7 @@ data "aws_ami" "latest_postgres_image" {
 
 # Data source to retrieve information about the PostgreSQL server instance
 data "aws_instance" "postgres_server_instance" {
-  description = "Retrieve information about the PostgreSQL server instance."
+  #description = "Retrieve information about the PostgreSQL server instance."
   instance_id = aws_instance.postgres_server.id
 
   filter {
@@ -28,7 +28,7 @@ data "aws_instance" "postgres_server_instance" {
 
 # Resource to create an AWS instance for the PostgreSQL server
 resource "aws_instance" "postgres_server" {
-  description = "Create an AWS instance for hosting the PostgreSQL server."
+  #description = "Create an AWS instance for hosting the PostgreSQL server."
   ami             = data.aws_ami.latest_postgres_image.id # us-west-2
   instance_type   = var.postgres_machine_data.type
   key_name        = var.key_pair_name
