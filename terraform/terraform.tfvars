@@ -50,7 +50,7 @@ sonarqube_machine_data = {
 image_owner = "624842782389"
 
 # Configuration for the jumpbox (Bastion Server)
-jumpbox_image_id = "ami-04e601abe3e1a910f"
+#jumpbox_image_id = "ami-04e601abe3e1a910f"
 jumpbox_name     = "BastionServer"
 jumpbox_type     = "t2.micro"
 

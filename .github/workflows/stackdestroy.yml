@@ -1,16 +1,16 @@
 name: "Infrastructure stack delete"
-# on:
-#  push:
-#    branches:
-#     - "master"
-#    paths:
-#     - "terraform/**"
+on:
+  push:
+    branches:
+     - "master"
+    paths:
+     - "terraform/**"
 #  pull_request:
 #    branches:
 #     - "master"
 #    paths:
 #     - "terraform/**"
-on: workflow_dispatch
+#on: workflow_dispatch
 # permissions:
 #   pull-requests: write
   
