@@ -4,15 +4,15 @@ name: nexus
 # Define when the workflow should be triggered.
 on:
   # Uncomment this section to trigger the workflow on pushes to the 'master' branch
-  # push:
-  #   branches:
-  #     - "master"
-  #   paths:
-  #     - "packer/aws/nexus/**"
-  #     - "scripts/nexus.sh"
+   push:
+     branches:
+       - "master"
+     paths:
+       - "packer/aws/nexus/**"
+       - "scripts/nexus.sh"
 
   # This workflow is currently triggered manually via the GitHub Actions web interface.
-  workflow_dispatch:
+#  workflow_dispatch:
     # This allows for manual triggering of the workflow.
 
 jobs:
