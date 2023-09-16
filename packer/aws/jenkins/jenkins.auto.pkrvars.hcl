@@ -2,6 +2,7 @@
 region        = "eu-central-1"
 instance_type = "t2.micro"
 
+
 # Define custom tags for the AMI.
 #These tags to be applied to Amazon Machine Image created by Packer
 tags = {
@@ -12,3 +13,4 @@ tags = {
   "Created-by"  = "Packer-200244692886"
 }
 
+#testing
