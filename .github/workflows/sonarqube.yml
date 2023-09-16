@@ -4,15 +4,15 @@ name: sonarqube  # Name of the workflow
 # You can uncomment the 'on' block below to specify conditions for automatic runs,
 # or leave it as is for manual runs using 'workflow_dispatch'.
 
-# on:
-#   push:
-#     branches:
-#       - "master"
-#     paths:
-#       - "packer/aws/sonarqube/**"
-#       - "scripts/sonarqube.sh"
+on:
+   push:
+     branches:
+       - "master"
+     paths:
+       - "packer/aws/sonarqube/**"
+       - "scripts/sonarqube.sh"
 
-on: workflow_dispatch  # Allowing manual runs using 'workflow_dispatch'
+#on: workflow_dispatch  # Allowing manual runs using 'workflow_dispatch'
 
 jobs:
   ami-creation:
