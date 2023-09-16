@@ -5,8 +5,8 @@ data "aws_ami" "latest_nexus_image" {
   owners      = ["${var.image_owner}"] # Canonical
 
   filter {
-    name   = "name"
-    values = ["${var.nexus_machine_data.image}-*"]
+    name   = "tag:Name"
+    values = ["NexusImage"]
   }
 
   filter {

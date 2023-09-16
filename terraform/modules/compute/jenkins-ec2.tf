@@ -5,8 +5,8 @@ data "aws_ami" "latest_jenkins_image" {
 
   # Filter the AMIs based on name, matching the provided Jenkins image name.
   filter {
-    name   = "name"
-    values = ["${var.jenkins_machine_data.image}-*"]
+    name   = "tag:Name"
+    values = ["JenkinsImage"]
   }
 
   # Filter the AMIs based on virtualization type (HVM - Hardware Virtual Machine).

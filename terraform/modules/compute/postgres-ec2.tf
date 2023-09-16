@@ -5,8 +5,8 @@ data "aws_ami" "latest_postgres_image" {
   owners      = ["${var.image_owner}"] # Canonical
 
   filter {
-    name   = "name"
-    values = ["${var.postgres_machine_data.image}-*"]
+    name   = "tag:Name"
+    values = ["PostgresImage"]
   }
 
   filter {

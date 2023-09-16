@@ -4,8 +4,8 @@ data "aws_ami" "latest_sonarqube_image" {
   owners      = ["${var.image_owner}"] # Specify the AMI owner (Canonical).
 
   filter {
-    name   = "name"
-    values = ["${var.sonarqube_machine_data.image}-*"]
+    name   = "tag:Name"
+    values = ["SonarqubeImage"]
   }
 
   filter {
