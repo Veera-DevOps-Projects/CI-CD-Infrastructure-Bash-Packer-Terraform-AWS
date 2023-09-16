@@ -1,6 +1,6 @@
 # Define the GitHub Actions workflow name.
 name: jekins
- on: 
+on: 
   push:
     branches:
       - "master"
