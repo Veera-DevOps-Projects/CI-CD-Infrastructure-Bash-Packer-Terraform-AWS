@@ -4,9 +4,9 @@ terraform {
 
   # Configure the Terraform backend to store state in an S3 bucket
   backend "s3" {
-    bucket = "ci-cd-packer-terraform-demo" # Name of the S3 bucket
+    bucket = "ci-cd-packer-terraform-demo"                  # Name of the S3 bucket
     key    = "dev/ci-cd-packer-terraform/terraform.tfstate" # Key (path) for the state file
-    region = "eu-central-1" # AWS region for the S3 bucket
+    region = "eu-central-1"                                 # AWS region for the S3 bucket
 
     # Enable state locking with DynamoDB
     dynamodb_table = "ci-cd-packer-terraform" # Name of the DynamoDB table
