@@ -3,6 +3,7 @@ name: nexus
 # This is the name of the GitHub Actions workflow.
 
 # Define when the workflow should be triggered.
+#Note: to trigger new workflow, we should modify something in 'paths'
 on: 
    push:
      branches:
