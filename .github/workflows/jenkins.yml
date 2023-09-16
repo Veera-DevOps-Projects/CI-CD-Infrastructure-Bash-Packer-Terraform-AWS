@@ -1,17 +1,17 @@
 # Define the GitHub Actions workflow name.
 name: jekins
-# on: 
-#  push:
-#    branches:
-#      - "master"
-#    paths:
-#      - "packer/aws/jenkins/**"
-#      - "scripts/jenkins.sh"
-#      - ".github/wokflows/jenkins.yml"
-#      - ".github/composite_actions/packer/**"
+ on: 
+  push:
+    branches:
+      - "master"
+    paths:
+      - "packer/aws/jenkins/**"
+      - "scripts/jenkins.sh"
+      - ".github/wokflows/jenkins.yml"
+      - ".github/composite_actions/packer/**"
 
 # Trigger the workflow on manual workflow_dispatch events.
-on: workflow_dispatch
+#on: workflow_dispatch
 
 # Define the jobs to be executed in this workflow.
 jobs:
