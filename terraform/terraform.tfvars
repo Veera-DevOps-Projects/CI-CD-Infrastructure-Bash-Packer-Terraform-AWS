@@ -21,28 +21,28 @@ key_pair_name = "demokey1"
 jenkins_machine_data = {
   image = "jenkins-server"
   name  = "JenkinsServer"
-  type  = "t2.small"
+  type  = "t2.micro"
 }
 
 # Configuration for Nexus server instance
 nexus_machine_data = {
   image = "nexus-server"
   name  = "NexusServer"
-  type  = "t2.small"
+  type  = "t2.micro"
 }
 
 # Configuration for Postgres server instance
 postgres_machine_data = {
   image = "postgres-sonardb-server"
   name  = "PostgresServer"
-  type  = "t2.small"
+  type  = "t2.micro"
 }
 
 # Configuration for Sonarqube server instance
 sonarqube_machine_data = {
   image = "sonarqube-server"
   name  = "SonarqubeServer"
-  type  = "t2.small"
+  type  = "t2.micro"
 }
 
 # Specify the owner of the Amazon Machine Images (AMIs)
@@ -51,5 +51,5 @@ image_owner = "200244692886"
 # Configuration for the jumpbox (Bastion Server)
 jumpbox_image_id = "ami-00874d747dde814fa"
 jumpbox_name     = "BastionServer"
-jumpbox_type     = "t2.small"
+jumpbox_type     = "t2.micro"
 
