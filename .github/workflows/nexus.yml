@@ -1,4 +1,4 @@
-name: nexus
+name: nexus-ami
 # This is the name of the GitHub Actions workflow.
 
 # Define when the workflow should be triggered.
