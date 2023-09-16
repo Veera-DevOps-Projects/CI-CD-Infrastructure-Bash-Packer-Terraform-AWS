@@ -14,7 +14,7 @@ source "amazon-ebs" "ubuntu" {
   # EC2 instance type that uses Packer for creating AMI 
   instance_type = var.instance_type
 
-  vpc_id = "vpc-0858fc82b15175a7f"
+  #vpc_id = "vpc-0858fc82b15175a7f"
 
   # Use the AWS region specified in variables.
   region        = var.region
