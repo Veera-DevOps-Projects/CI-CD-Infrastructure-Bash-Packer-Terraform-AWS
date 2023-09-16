@@ -10,6 +10,8 @@ on:
      paths:
        - "packer/aws/nexus/**"
        - "scripts/nexus.sh"
+       - ".github/wokflows/nexus.yml"
+       - ".github/composite_actions/packer/**"       
 
   # This workflow is currently triggered manually via the GitHub Actions web interface.
 #  workflow_dispatch:
