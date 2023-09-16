@@ -1,16 +1,16 @@
 # Name of the GitHub Actions workflow
 name: "Infrastructure stack deployment"
 
-on: workflow_dispatch
+#on: workflow_dispatch
 
 # Define the triggers for when this workflow should run
-#on:
+on:
   # Run on push events to the "master" branch that affect files in the "terraform" directory
-#  push:
-#    branches:
- #     - "master"
-  #  paths:
-   #   - "terraform/**"
+  push:
+    branches:
+      - "master"
+    paths:
+      - "terraform/**"
   # Run on pull requests to the "master" branch that affect files in the "terraform" directory
   #pull_request:
    # branches:

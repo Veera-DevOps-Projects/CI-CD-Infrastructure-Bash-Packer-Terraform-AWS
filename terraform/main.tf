@@ -1,4 +1,5 @@
 # Define and configure the 'network' module responsible for setting up the VPC, subnets, and routing.
+#network moudle deployment
 module "network" {
   source              = "./modules/network"  # Module source path.
   environment         = var.environment       # Pass the 'environment' variable to the module.
