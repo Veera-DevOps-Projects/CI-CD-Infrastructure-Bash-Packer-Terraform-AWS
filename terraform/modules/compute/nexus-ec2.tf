@@ -2,7 +2,7 @@
 data "aws_ami" "latest_nexus_image" {
   #description = "Retrieve the latest Nexus machine image (AMI) from AWS."
   most_recent = true
-  owners      = ["${var.image_owner}"] # Canonical
+  #owners      = ["${var.image_owner}"] # Canonical
 
   filter {
     name   = "tag:Name"

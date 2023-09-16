@@ -1,7 +1,7 @@
 # Define a data source to retrieve the latest AWS AMI (Amazon Machine Image) for Jenkins Server.
 data "aws_ami" "latest_jenkins_image" {
   most_recent = true
-  owners      = ["Packer-200244692886"] 
+  #owners      = ["Packer-200244692886"] 
   # Specify the correct owner (AWS account name).
 
   # Filter the AMIs based on name, matching the provided Jenkins image name.

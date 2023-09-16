@@ -1,7 +1,7 @@
 # Define a data source to retrieve the latest SonarQube Amazon Machine Image (AMI).
 data "aws_ami" "latest_sonarqube_image" {
   most_recent = true
-  owners      = ["${var.image_owner}"] # Specify the AMI owner (Canonical).
+  #owners      = ["${var.image_owner}"] # Specify the AMI owner (Canonical).
 
   filter {
     name   = "tag:Name"
