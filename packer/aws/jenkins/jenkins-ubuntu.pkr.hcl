@@ -19,6 +19,14 @@ source "amazon-ebs" "ubuntu" {
   # Use the AWS region specified in variables.
   region        = var.region
 
+  subnet_filter {
+    filters = {
+          "tag:Class": "build"
+    }
+    most_free = true
+    random = false
+  }  
+
   # Filter the source AMI by various criteria.
   # Packer uses following as a base. 
   source_ami_filter {
