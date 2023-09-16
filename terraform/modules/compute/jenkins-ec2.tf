@@ -1,7 +1,8 @@
 # Define a data source to retrieve the latest AWS AMI (Amazon Machine Image) for Jenkins Server.
 data "aws_ami" "latest_jenkins_image" {
   most_recent = true
-  owners      = ["${var.image_owner}"] # Specify the image owner (Canonical).
+  owners      = ["Packer-200244692886"] 
+  # Specify the correct owner (AWS account name).
 
   # Filter the AMIs based on name, matching the provided Jenkins image name.
   filter {
@@ -15,6 +16,7 @@ data "aws_ami" "latest_jenkins_image" {
     values = ["hvm"]
   }
 }
+
 
 # Define an AWS EC2 instance resource for the Jenkins server using the retrieved AMI.
 resource "aws_instance" "jenkins_server" {

@@ -46,7 +46,8 @@ sonarqube_machine_data = {
 }
 
 # Specify the owner of the Amazon Machine Images (AMIs)
-image_owner = "200244692886"
+#owners      = ["Packer-200244692886"]
+image_owner = "Packer-200244692886"
 
 # Configuration for the jumpbox (Bastion Server)
 jumpbox_image_id = "ami-00874d747dde814fa"
