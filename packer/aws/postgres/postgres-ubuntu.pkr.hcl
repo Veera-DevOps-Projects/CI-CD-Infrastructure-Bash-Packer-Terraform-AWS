@@ -1,3 +1,5 @@
+# Define a local variable to generate a timestamp.
+#It creates unique identifier
 locals {
   timestamp = regex_replace(timestamp(), "[- TZ:]", "")
 }
