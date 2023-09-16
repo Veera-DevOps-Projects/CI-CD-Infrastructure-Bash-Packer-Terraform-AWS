@@ -1,3 +1,10 @@
+![Jenkins](https://github.com/github/docs/actions/workflows/jenkins.yml/badge.svg)
+![nexus workflow](https://github.com/github/docs/actions/workflows/nexus.yml/badge.svg)
+![postgres workflow](https://github.com/github/docs/actions/workflows/postgres.yml/badge.svg)
+![sonarqube workflow](https://github.com/github/docs/actions/workflows/sonarqube.yml/badge.svg)
+![stackdeployment workflow](https://github.com/github/docs/actions/workflows/stackdeployment.yml/badge.svg)
+![stackdestroy workflow](https://github.com/github/docs/actions/workflows/stackdestroy.yml/badge.svg)
+
 # CI/CD Infrastructure deployment using Terraform, GitHub Actions with custom machine images by Packer
 
 In this repository, I discuss about CI/CD, it’s benefits along with Immutable infrastructure and it’s advantages. Then I set up **four GitHub Actions workflows** for creating machine images using **Packer**. After that, I deploy a multi-tier network using **Terraform** configurations and utilize custom machine images to **deploy CI/CD infrastructure**. Infrastructure deployment was carried out by GitHub actions workflows. Finally, I clean up and remove the deployment using destroy workflow.
