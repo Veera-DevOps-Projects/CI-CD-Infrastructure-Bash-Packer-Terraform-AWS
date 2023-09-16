@@ -14,7 +14,7 @@ on:
 
   # This workflow is currently triggered manually via the GitHub Actions web interface.
 #  workflow_dispatch:
-    # This allows for manual triggering of the workflow.
+
 
 jobs:
   ami-creation:
