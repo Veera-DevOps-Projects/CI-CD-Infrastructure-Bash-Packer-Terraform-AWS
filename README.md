@@ -1,9 +1,14 @@
-![Jenkins](https://github.com/github/docs/actions/workflows/jenkins.yml/badge.svg)
-![nexus workflow](https://github.com/github/docs/actions/workflows/nexus.yml/badge.svg)
-![postgres workflow](https://github.com/github/docs/actions/workflows/postgres.yml/badge.svg)
-![sonarqube workflow](https://github.com/github/docs/actions/workflows/sonarqube.yml/badge.svg)
-![stackdeployment workflow](https://github.com/github/docs/actions/workflows/stackdeployment.yml/badge.svg)
-![stackdestroy workflow](https://github.com/github/docs/actions/workflows/stackdestroy.yml/badge.svg)
+[![jekins](https://github.com/Veera-DevOps-Projects/CI-CD-Infrastructure-Bash-Packer-Terraform-AWS/actions/workflows/jenkins.yml/badge.svg?branch=master)](https://github.com/Veera-DevOps-Projects/CI-CD-Infrastructure-Bash-Packer-Terraform-AWS/actions/workflows/jenkins.yml)
+
+[![nexus](https://github.com/Veera-DevOps-Projects/CI-CD-Infrastructure-Bash-Packer-Terraform-AWS/actions/workflows/nexus.yml/badge.svg)](https://github.com/Veera-DevOps-Projects/CI-CD-Infrastructure-Bash-Packer-Terraform-AWS/actions/workflows/nexus.yml)
+
+[![postgres](https://github.com/Veera-DevOps-Projects/CI-CD-Infrastructure-Bash-Packer-Terraform-AWS/actions/workflows/postgres.yml/badge.svg)](https://github.com/Veera-DevOps-Projects/CI-CD-Infrastructure-Bash-Packer-Terraform-AWS/actions/workflows/postgres.yml)
+
+[![sonarqube](https://github.com/Veera-DevOps-Projects/CI-CD-Infrastructure-Bash-Packer-Terraform-AWS/actions/workflows/sonarqube.yml/badge.svg)](https://github.com/Veera-DevOps-Projects/CI-CD-Infrastructure-Bash-Packer-Terraform-AWS/actions/workflows/sonarqube.yml)
+
+[![Infrastructure stack deployment](https://github.com/Veera-DevOps-Projects/CI-CD-Infrastructure-Bash-Packer-Terraform-AWS/actions/workflows/stackdeployment.yml/badge.svg)](https://github.com/Veera-DevOps-Projects/CI-CD-Infrastructure-Bash-Packer-Terraform-AWS/actions/workflows/stackdeployment.yml)
+
+[![Infrastructure stack delete](https://github.com/Veera-DevOps-Projects/CI-CD-Infrastructure-Bash-Packer-Terraform-AWS/actions/workflows/stackdestroy.yml/badge.svg)](https://github.com/Veera-DevOps-Projects/CI-CD-Infrastructure-Bash-Packer-Terraform-AWS/actions/workflows/stackdestroy.yml)
 
 # CI/CD Infrastructure deployment using Terraform, GitHub Actions with custom machine images by Packer
 
