@@ -21,7 +21,7 @@ source "amazon-ebs" "ubuntu" {
 
   subnet_filter {
     filters = {
-          "tag:Class": "build"
+        "tag:Class": "build"
     }
     most_free = true
     random = false
