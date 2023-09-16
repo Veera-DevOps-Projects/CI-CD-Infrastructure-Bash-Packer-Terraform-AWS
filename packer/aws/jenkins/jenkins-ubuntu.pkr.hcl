@@ -56,6 +56,7 @@ build {
 
   # Specify the source for this build, which is the previously defined Amazon EBS source.
   sources     = ["source.amazon-ebs.ubuntu"]
+  vpc_id = "vpc-0858fc82b15175a7f"
 
   # Define a shell provisioner to run a script.
   provisioner "shell" {
