@@ -24,6 +24,9 @@ source "amazon-ebs" "ubuntu" {
 
 }
 
+# Define a source block for creating an AMI using the Amazon EBS builder.
+#It includes settings for the resulting AMI, the source image to use, and more.
+
 build {
   name        = "postgres-sonardb-server"
   description = <<EOF
