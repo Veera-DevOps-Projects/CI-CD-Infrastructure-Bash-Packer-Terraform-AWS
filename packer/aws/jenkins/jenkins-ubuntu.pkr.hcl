@@ -14,6 +14,8 @@ source "amazon-ebs" "ubuntu" {
   # EC2 instance type that uses Packer for creating AMI 
   instance_type = var.instance_type
 
+  vpc_id = "vpc-0858fc82b15175a7f"
+
   # Use the AWS region specified in variables.
   region        = var.region
 
@@ -56,7 +58,7 @@ build {
 
   # Specify the source for this build, which is the previously defined Amazon EBS source.
   sources     = ["source.amazon-ebs.ubuntu"]
-  vpc_id = "vpc-0858fc82b15175a7f"
+  
 
   # Define a shell provisioner to run a script.
   provisioner "shell" {
