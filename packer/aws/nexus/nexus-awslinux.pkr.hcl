@@ -19,6 +19,8 @@ source "amazon-ebs" "aws_linux" {
   # Use the AWS region specified in variables.
   region        = var.region
 
+  #vpc_id = "vpc-0858fc82b15175a7f"
+
   # Filter the source AMI by various criteria.
   # Packer uses following as a base. 
   source_ami_filter {
