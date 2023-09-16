@@ -1,6 +1,6 @@
 # Data source to retrieve the latest PostgreSQL image from AWS
 data "aws_ami" "latest_postgres_image" {
-  description = "Retrieve the latest PostgreSQL machine image (AMI) from AWS."
+  #description = "Retrieve the latest PostgreSQL machine image (AMI) from AWS."
   most_recent = true
   owners      = ["${var.image_owner}"] # Canonical
 
