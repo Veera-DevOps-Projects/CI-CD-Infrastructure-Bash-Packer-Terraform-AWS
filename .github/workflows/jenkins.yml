@@ -1,4 +1,5 @@
 # Define the GitHub Actions workflow name.
+#triggers on push
 name: jekins
 on: 
   push:
